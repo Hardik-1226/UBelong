@@ -47,6 +47,7 @@ export default function LoadingScreen() {
       }, 600);
       return () => clearTimeout(timer);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [progress]);
 
   return (

@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 import { useApp } from "@/context/AppContext";
 import { translations } from "@/locales/translations";
-import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, Play, FilePlus2 } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   const { language, runCaseSimulation } = useApp();
@@ -134,10 +135,13 @@ export default function Hero() {
           <div className="relative w-full max-w-sm aspect-[4/5] rounded-[2rem] overflow-hidden border-8 border-white dark:border-slate-900 shadow-lg group">
             {/* Soft Pastel Overlay Frame */}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent z-10" />
-            <img
+            <Image
               src="/photo-1488521787991-ed7bbaae773c.avif"
               alt="Child claiming legal identity"
-              className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
+              fill
+              className="object-cover group-hover:scale-102 transition-transform duration-700"
+              sizes="(max-width: 768px) 100vw, 400px"
+              priority
             />
             
             {/* Quote Caption */}
