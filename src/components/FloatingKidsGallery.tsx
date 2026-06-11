@@ -54,7 +54,7 @@ export default function FloatingKidsGallery() {
           Every child deserves a recognized identity
         </h2>
         <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed max-w-lg mx-auto font-medium">
-          A birth certificate is more than paper. It's the key to education, healthcare, and a future free from the shadows of statelessness.
+          A birth certificate is more than paper. It&apos;s the key to education, healthcare, and a future free from the shadows of statelessness.
         </p>
       </div>
     </section>

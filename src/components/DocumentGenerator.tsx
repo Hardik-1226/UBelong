@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useApp } from "@/context/AppContext";
 import { translations } from "@/locales/translations";
 import { motion, AnimatePresence } from "framer-motion";
-import { FileUp, FileText, Scan, Layers, CheckCircle2, ShieldCheck, Loader2 } from "lucide-react";
+import { FileUp, FileText, Scan, CheckCircle2, ShieldCheck, Loader2 } from "lucide-react";
 
 interface DocumentPreset {
   name: string;
@@ -89,7 +89,7 @@ const documentPresets: DocumentPreset[] = [
 ];
 
 export default function DocumentGenerator() {
-  const { language, caseStatus, setCaseStatus, setCaseData, runCaseSimulation } = useApp();
+  const { language, caseStatus, setCaseStatus, setCaseData } = useApp();
   const t = translations[language];
 
   const [selectedPreset, setSelectedPreset] = useState<DocumentPreset | null>(null);
@@ -123,6 +123,7 @@ export default function DocumentGenerator() {
     } else if (caseStatus === "ocr_done") {
       setScanStage("completed");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [caseStatus]);
 
   const animateBoundingBoxes = () => {

@@ -42,7 +42,7 @@ export default function Hero() {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 16,
         stiffness: 120,
       },

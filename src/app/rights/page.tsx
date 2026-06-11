@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ShieldAlert, Heart, Scale } from "lucide-react";
 
 export default function RightsPage() {
@@ -40,10 +41,12 @@ export default function RightsPage() {
           {/* Left Column: Image Card */}
           <div className="md:col-span-6 flex flex-col bg-white dark:bg-slate-900/40 rounded-3xl border border-teal-800/10 dark:border-teal-500/10 shadow-sm overflow-hidden group">
             <div className="relative aspect-[3/2] overflow-hidden bg-slate-100 dark:bg-slate-950">
-              <img
+              <Image
                 src="/child-identity.jpg"
                 alt="I have the right to an identity, a name and a nationality"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="p-6">

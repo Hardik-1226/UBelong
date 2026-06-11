@@ -59,7 +59,7 @@ export default function ChildRegistrationForm() {
                 Intake Received
               </h3>
               <p className="text-slate-600 dark:text-slate-300 max-w-md">
-                We have securely received the child's information. The AI legal agents are now analyzing the jurisdiction and required documents.
+                We have securely received the child&apos;s information. The AI legal agents are now analyzing the jurisdiction and required documents.
               </p>
             </div>
           ) : null}
@@ -103,11 +103,11 @@ export default function ChildRegistrationForm() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Mother's Full Name</label>
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Mother&apos;s Full Name</label>
                   <input required type="text" name="motherName" value={formData.motherName} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="Enter mother's full name" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Father's Full Name</label>
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Father&apos;s Full Name</label>
                   <input required type="text" name="fatherName" value={formData.fatherName} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="Enter father's full name" />
                 </div>
               </div>

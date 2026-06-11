@@ -148,6 +148,7 @@ export default function AgentActivityShowcase() {
     if (caseStatus === "agents_running") {
       runAgentFlow();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [caseStatus]);
 
   const getTimestamp = () => {

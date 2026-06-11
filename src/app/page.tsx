@@ -23,7 +23,7 @@ import TimelineTracker from "@/components/TimelineTracker";
 import Footer from "@/components/Footer";
 
 // Icons
-import { ShieldCheck, HeartHandshake } from "lucide-react";
+import { HeartHandshake } from "lucide-react";
 
 const queryClient = new QueryClient();
 

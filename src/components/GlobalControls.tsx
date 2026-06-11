@@ -11,7 +11,6 @@ import {
   Eye,
   Languages,
   Mic,
-  MicOff,
   Settings,
   X,
   Plus,
@@ -41,7 +40,7 @@ export default function GlobalControls() {
   const [screenReaderActive, setScreenReaderActive] = useState(false);
   const [voiceActive, setVoiceActive] = useState(false);
   const [voiceTranscript, setVoiceTranscript] = useState("");
-  const [speakText, setSpeakText] = useState("");
+
 
   // Voice speech synthesis simulation
   const handleScreenReaderToggle = () => {
@@ -77,6 +76,7 @@ export default function GlobalControls() {
     return () => {
       document.removeEventListener("mouseover", handleMouseOver);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [screenReaderActive, language]);
 
   // Voice Command (Speech recognition) simulation
