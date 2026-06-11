@@ -1,103 +1,112 @@
-import Image from "next/image";
+"use client";
+
+import React, { useEffect } from "react";
+import Link from "next/link";
+import { useApp } from "@/context/AppContext";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Lenis from "lenis";
+
+// Components
+import LoadingScreen from "@/components/LoadingScreen";
+import GlobalControls from "@/components/GlobalControls";
+import Hero from "@/components/Hero";
+import FloatingKidsGallery from "@/components/FloatingKidsGallery";
+import ChildRegistrationForm from "@/components/ChildRegistrationForm";
+import ImpactCounter from "@/components/ImpactCounter";
+import HowItWorks from "@/components/HowItWorks";
+import AgentActivityShowcase from "@/components/AgentActivityShowcase";
+import CaseJourney from "@/components/CaseJourney";
+import CountryIntelligenceMap from "@/components/CountryIntelligenceMap";
+import DocumentGenerator from "@/components/DocumentGenerator";
+import SuccessStories from "@/components/SuccessStories";
+import TimelineTracker from "@/components/TimelineTracker";
+import Footer from "@/components/Footer";
+
+// Icons
+import { ShieldCheck, HeartHandshake } from "lucide-react";
+
+const queryClient = new QueryClient();
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const { language } = useApp();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  // Lenis Smooth Scroll Initialization
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  // Determine language layout direction
+  const isRtl = language === "ar";
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <div dir={isRtl ? "rtl" : "ltr"} className="min-h-screen selection:bg-teal-700 selection:text-white bg-background text-foreground transition-all duration-300">
+        
+        {/* Loader Globe Overlay */}
+        <LoadingScreen />
+
+        {/* Floating Controls Configuration Widget */}
+        <GlobalControls />
+
+        {/* Global Editorial Navigation Bar */}
+        <header className="fixed top-0 left-0 right-0 z-40 bg-white/70 dark:bg-slate-905/70 border-b border-slate-200 dark:border-slate-800 backdrop-blur-xl transition-all duration-300">
+          <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            {/* Brand Logo */}
+            <a href="#hero" className="flex items-center gap-2.5 group">
+              <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center border border-slate-200 dark:border-slate-850 shadow-sm">
+                <HeartHandshake className="w-5 h-5 text-white animate-pulse" />
+              </div>
+              <span className="font-display text-lg font-bold text-slate-900 dark:text-teal-50 tracking-tight">
+                UBelong
+              </span>
+            </a>
+
+            {/* Menu Links */}
+            <nav className="hidden md:flex items-center gap-8 text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+              <a href="#how-it-works" className="hover:text-primary transition-colors">How It Works</a>
+              <a href="#agent-showcase" className="hover:text-primary transition-colors">Mission Control</a>
+              <a href="#country-intelligence" className="hover:text-primary transition-colors">Intelligence Map</a>
+              <a href="#document-generator" className="hover:text-primary transition-colors">OCR Scanner</a>
+              <a href="#success-stories" className="hover:text-primary transition-colors">Stories</a>
+              <Link href="/rights" className="hover:text-primary transition-colors">Identity Charter</Link>
+            </nav>
+
+
+          </div>
+        </header>
+
+        {/* Main Sections */}
+        <main className="pt-16">
+          <Hero />
+          <FloatingKidsGallery />
+          <ImpactCounter />
+          <ChildRegistrationForm />
+          <DocumentGenerator />
+          <HowItWorks />
+          <AgentActivityShowcase />
+          <CaseJourney />
+          <CountryIntelligenceMap />
+          <SuccessStories />
+          <TimelineTracker />
+        </main>
+
+        {/* Minimal Footer */}
+        <Footer />
+      </div>
+    </QueryClientProvider>
   );
 }
