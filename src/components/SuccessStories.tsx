@@ -25,8 +25,8 @@ const successStories: Story[] = [
     imageColor: "from-teal-600 to-teal-800",
     challenge: "Lost parent marriage contracts during border displacement. Lebanese registry rejected initial requests due to absence of official wedding documents.",
     outcome: "Dossier matched to 1965 Bilateral Agreement. Midwife statements and Shura Elder affidavits accepted as secondary legal proof. Birth registration approved in 45 days.",
-    quote: "We felt invisible for four years. UBelong guided us to secondary proofs we didn't know existed, and now Amira has her certificate.",
-    fullStory: "During the shelling of Aleppo, Yousef and Fatima lost their home and all possessions, including their marriage certificate. When their daughter Amira was born in a makeshift clinic in Lebanon, standard registration was impossible. UBelong scanned regional treaties, compiled witness statements from neighbors, and drafted a formal appeal package. Amira can now enroll in public school.",
+    quote: "We felt invisible for four years. UBlong guided us to secondary proofs we didn't know existed, and now Amira has her certificate.",
+    fullStory: "During the shelling of Aleppo, Yousef and Fatima lost their home and all possessions, including their marriage certificate. When their daughter Amira was born in a makeshift clinic in Lebanon, standard registration was impossible. UBlong scanned regional treaties, compiled witness statements from neighbors, and drafted a formal appeal package. Amira can now enroll in public school.",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const successStories: Story[] = [
     challenge: "Hospital birth registration slip rejected by Colombian registry due to parents' expired Venezuelan passports and missing migration stamps.",
     outcome: "Generated statutory appeal based on Constitutional Decree 11-B. School registration index and local vaccination card logs linked as alternative evidence. Identity approved.",
     quote: "Every government office closed the door. The AI matched us to a local decree that bypassed our expired passport requirement.",
-    fullStory: "After crossing the border, the Silva family could not renew their passports. When Mateo was born, the local civil office refused his certificate. UBelong parsed Colombia's updated human rights decrees, generated a legally sound application bypassing national passport rules, and matched Mateo's case to active civil registry waivers. Mateo is now officially registered.",
+    fullStory: "After crossing the border, the Silva family could not renew their passports. When Mateo was born, the local civil office refused his certificate. UBlong parsed Colombia's updated human rights decrees, generated a legally sound application bypassing national passport rules, and matched Mateo's case to active civil registry waivers. Mateo is now officially registered.",
   },
   {
     id: 3,
@@ -45,8 +45,8 @@ const successStories: Story[] = [
     imageColor: "from-amber-500 to-amber-700",
     challenge: "Home birth in remote province. No hospital live-birth notification available, leading to zero official civil registration tracks.",
     outcome: "Stitched mosque registry ledger notes, village council (Shura) statements, and certified midwife statements into an official appeal package. Document successfully generated.",
-    quote: "Our child was born at home. Without a hospital, we thought registration was impossible. UBelong showed us the legal value of village records.",
-    fullStory: "Born in a remote community without medical clinics, Bashir had no hospital card. Without this, standard registration was unavailable. UBelong's research AI discovered regional administrative policies accepting village elder signatures and local mosque birth ledger pages. The platform compiled a structured petition package, securing Bashir's civil rights.",
+    quote: "Our child was born at home. Without a hospital, we thought registration was impossible. UBlong showed us the legal value of village records.",
+    fullStory: "Born in a remote community without medical clinics, Bashir had no hospital card. Without this, standard registration was unavailable. UBlong's research AI discovered regional administrative policies accepting village elder signatures and local mosque birth ledger pages. The platform compiled a structured petition package, securing Bashir's civil rights.",
   },
 ];
 

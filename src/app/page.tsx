@@ -30,12 +30,21 @@ const queryClient = new QueryClient();
 export default function Home() {
   const { language } = useApp();
 
+  // Scroll to top on initial mount to prevent starting mid-page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Lenis Smooth Scroll Initialization
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      autoRaf: false,
     });
+
+    // Ensure we start at top after Lenis initializes
+    lenis.scrollTo(0, { immediate: true });
 
     function raf(time: number) {
       lenis.raf(time);
@@ -71,7 +80,7 @@ export default function Home() {
                 <HeartHandshake className="w-5 h-5 text-white animate-pulse" />
               </div>
               <span className="font-display text-lg font-bold text-slate-900 dark:text-teal-50 tracking-tight">
-                UBelong
+                UBlong
               </span>
             </a>
 

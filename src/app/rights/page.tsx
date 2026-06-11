@@ -16,7 +16,7 @@ export default function RightsPage() {
             Back to Portal
           </Link>
           <span className="font-display text-lg font-bold text-teal-950 dark:text-teal-50">
-            UBelong Identity Charter
+            UBlong Identity Charter
           </span>
         </div>
       </header>
@@ -77,7 +77,7 @@ export default function RightsPage() {
                 Our Legal Mission
               </h3>
               <p className="text-xs md:text-sm text-slate-650 dark:text-slate-350 leading-relaxed font-light">
-                UBelong leverages advanced AI frameworks to parse statutory codes and establish alternative verification pathways. We help stateless parents stitch together midwife certificates, camp indices, and witness statements to claim legal certificates.
+                UBlong leverages advanced AI frameworks to parse statutory codes and establish alternative verification pathways. We help stateless parents stitch together midwife certificates, camp indices, and witness statements to claim legal certificates.
               </p>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function RightsPage() {
               &ldquo;No child should be penalized for the circumstances of their birth or displacement. Identity is the first key to safety.&rdquo;
             </p>
             <cite className="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 not-italic">
-              — UBelong Charter Committee
+              — UBlong Charter Committee
             </cite>
           </div>
         </blockquote>

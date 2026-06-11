@@ -7,10 +7,10 @@ import { Globe } from "lucide-react";
 export default function LoadingScreen() {
   const [isVisible, setIsVisible] = useState(true);
   const [progress, setProgress] = useState(0);
-  const [statusText, setStatusText] = useState("Initializing UBelong secure legal channels...");
+  const [statusText, setStatusText] = useState("Initializing UBlong secure legal channels...");
 
   const statusPhrases = [
-    "Initializing UBelong secure legal channels...",
+    "Initializing UBlong secure legal channels...",
     "Retrieving country-specific birth certificate requirements...",
     "Calibrating translation engines...",
     "Structuring legal document templates...",
@@ -77,7 +77,7 @@ export default function LoadingScreen() {
               transition={{ delay: 0.2 }}
               className="font-display text-4xl font-extrabold text-teal-950 dark:text-teal-50 tracking-tight mb-2"
             >
-              UBelong
+              UBlong
             </motion.h1>
 
             <motion.p

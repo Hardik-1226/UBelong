@@ -41,7 +41,7 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="flex flex-col gap-4">
             <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-teal-50">
-              UBelong
+              UBlong
             </h3>
             <p className="text-xs font-normal leading-relaxed text-slate-800 dark:text-slate-300">
               An award-winning platform leveraging decentralized AI agent frameworks to secure legal birth registration and identity for stateless and refugee children worldwide.
@@ -104,7 +104,7 @@ export default function Footer() {
             </h4>
             <span className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-primary" />
-              <span>secure@ubelong.intl.org</span>
+              <span>secure@ublong.intl.org</span>
             </span>
             <span className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-primary" />
@@ -119,7 +119,7 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="border-t border-slate-200 dark:border-slate-900 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 select-none">
-          <span>© {new Date().getFullYear()} UBelong. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} UBlong. All rights reserved.</span>
           <div className="flex gap-4">
             <a href="#" className="hover:underline">Privacy Charter</a>
             <a href="#" className="hover:underline">Legal Precedent Archive</a>

@@ -30,7 +30,7 @@ export const translations = {
     docGenTitle: "AI Document Scanner",
     docGenSub: "Upload hospital notes, refugee cards, or certificates to extract legal metadata and verify validity.",
     successTitle: "Hope Restored",
-    successSub: "Read how UBelong helps families escape statelessness and secure basic rights.",
+    successSub: "Read how UBlong helps families escape statelessness and secure basic rights.",
     timelineTitle: "Active Case Tracker",
     timelineSub: "Simulating live progress status and milestones of a family registration package."
   },
@@ -65,7 +65,7 @@ export const translations = {
     docGenTitle: "Escáner de Documentos por IA",
     docGenSub: "Suba notas de hospital o tarjetas de refugiados para extraer metadatos y verificar validez.",
     successTitle: "Esperanza Restaurada",
-    successSub: "Vea cómo UBelong ayuda a las familias a escapar de la apatridia.",
+    successSub: "Vea cómo UBlong ayuda a las familias a escapar de la apatridia.",
     timelineTitle: "Rastreador de Casos Activos",
     timelineSub: "Simulando el progreso en vivo y los hitos del paquete de registro de una familia."
   },
@@ -100,7 +100,7 @@ export const translations = {
     docGenTitle: "Scanner de Documents IA",
     docGenSub: "Téléversez des fiches médicales ou cartes de réfugié pour en extraire les métadonnées.",
     successTitle: "Espoir Retrouvé",
-    successSub: "Découvrez comment UBelong aide les familles à sortir de l'apatridie.",
+    successSub: "Découvrez comment UBlong aide les familles à sortir de l'apatridie.",
     timelineTitle: "Suivi de Dossier Actif",
     timelineSub: "Simulation de l'état d'avancement et des étapes clés du dossier d'enregistrement."
   },
@@ -135,7 +135,7 @@ export const translations = {
     docGenTitle: "ماسح الوثائق الذكي",
     docGenSub: "قم بتحميل التقارير الطبية أو بطاقات اللجوء لاستخراج البيانات والتحقق من صلاحيتها.",
     successTitle: "استعادة الأمل",
-    successSub: "اقرأ قصصاً ملهمة عن مساعدة عائلات UBelong في الهروب من حالة انعدام الجنسية.",
+    successSub: "اقرأ قصصاً ملهمة عن مساعدة عائلات UBlong في الهروب من حالة انعدام الجنسية.",
     timelineTitle: "متتبع القضايا النشط",
     timelineSub: "محاكاة حية لمراحل التقدم والخطوات المنجزة لحزمة تسجيل عائلة."
   }

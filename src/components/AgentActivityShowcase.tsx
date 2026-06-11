@@ -28,6 +28,7 @@ export default function AgentActivityShowcase() {
   const { language, caseStatus, runCaseSimulation, resetCaseSimulation } = useApp();
   const t = translations[language];
 
+  const terminalContainerRef = useRef<HTMLDivElement>(null);
   const terminalEndRef = useRef<HTMLDivElement>(null);
   const [logs, setLogs] = useState<LogMessage[]>([]);
   const [activeAgent, setActiveAgent] = useState<string>("Research");
@@ -87,9 +88,16 @@ export default function AgentActivityShowcase() {
     },
   ];
 
-  // Auto-scroll terminal
+  // Auto-scroll terminal - use scrollTop on container instead of scrollIntoView
+  // because Lenis intercepts scrollIntoView and scrolls the whole page
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    const container = terminalContainerRef.current;
+    if (container) {
+      // Use requestAnimationFrame to ensure DOM has updated
+      requestAnimationFrame(() => {
+        container.scrollTop = container.scrollHeight;
+      });
+    }
   }, [logs]);
 
   // Simulate logs based on caseStatus
@@ -383,7 +391,7 @@ export default function AgentActivityShowcase() {
               <div className="flex items-center gap-2">
                 <Terminal className="w-4.5 h-4.5 text-accent" />
                 <span className="text-xs font-mono tracking-wider font-semibold text-slate-400">
-                  ubelong@agent-network ~ console
+                  ublong@agent-network ~ console
                 </span>
               </div>
               <div className="flex gap-1.5">
@@ -394,7 +402,7 @@ export default function AgentActivityShowcase() {
             </div>
 
             {/* Console Body Logs */}
-            <div className="flex-1 overflow-y-auto max-h-[380px] font-mono text-[11px] lg:text-xs flex flex-col gap-2.5 pr-2">
+            <div ref={terminalContainerRef} className="flex-1 overflow-y-auto max-h-[380px] font-mono text-[11px] lg:text-xs flex flex-col gap-2.5 pr-2" style={{ scrollBehavior: 'smooth' }}>
               <AnimatePresence>
                 {logs.map((log, index) => (
                   <motion.div

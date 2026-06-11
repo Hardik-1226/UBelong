@@ -11,7 +11,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "UBelong | AI-Powered Civil Registration & Legal Identity Platform",
+  title: "UBlong | AI-Powered Civil Registration & Legal Identity Platform",
   description:
     "Helping refugee, migrant, and stateless families secure official birth registration and legal document packages for children with state-of-the-art AI legal navigation.",
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "UNICEF",
     "Civil registration",
   ],
-  authors: [{ name: "UBelong Team" }],
+  authors: [{ name: "UBlong Team" }],
 };
 
 export default function RootLayout({

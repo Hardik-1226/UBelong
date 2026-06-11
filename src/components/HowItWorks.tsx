@@ -65,7 +65,7 @@ export default function HowItWorks() {
       title: t.step6Title,
       desc: t.step6Desc,
       details:
-        "If rejected, UBelong analyzes the rejection notice. The Legal Agent generates customized formal appeal petitions, supporting briefs, and schedules review hearings.",
+        "If rejected, UBlong analyzes the rejection notice. The Legal Agent generates customized formal appeal petitions, supporting briefs, and schedules review hearings.",
     },
   ];
 
